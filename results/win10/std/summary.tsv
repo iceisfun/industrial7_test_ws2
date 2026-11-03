@@ -33,7 +33,7 @@ std	mswsock_acceptex_transmit	163	0	0	1189	0	0	-	OK
 std	nsp_lookup_service	137	0	3	584	0	0	-	OK
 std	protocol_catalog	341	0	0	2124	0	0	-	OK
 std	qos_misc_apis	212	0	2	578	0	0	-	OK
-std	select_poll	231	0	0	6784	0	0	-	OK
+std	select_poll	231	0	0	6790	0	0	-	OK
 std	socket_create	307	0	3	11262	0	0	-	OK
 std	socket_handle_semantics	277	0	0	1303	0	0	-	OK
 std	sockopt_protocol_level	346	0	0	3979	0	0	-	OK
@@ -54,7 +54,7 @@ std	x_dualstack_scope_matrix	167	0	0	3883	0	0	-	OK
 std	x_error_mapping	724	0	0	1572	0	0	-	OK
 std	x_getaddrinfoex_async	170	0	0	4462	0	0	-	OK
 std	x_ioctl_sweep	236	0	0	2022674	0	0	-	OK
-std	x_overlapped_matrix	114	0	0	6295	0	0	-	OK
+std	x_overlapped_matrix	122	0	0	6537	0	0	-	OK
 std	x_raw_icmp_elevated	227	0	60	1334	0	0	-	OK
 std	x_registered_io	143	0	0	1780	0	0	-	OK
 std	x_select_poll_matrix	120	0	0	3267	0	0	-	OK

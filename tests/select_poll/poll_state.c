@@ -242,6 +242,7 @@ FAMILY_TEST(sp_pol_listener_with_backlog_of_three_drains_one_by_one)
     for (i = 0; i < 3; i++) { c[i] = sp_sock(af, SOCK_STREAM, 0); SPEQ(sp_connect(c[i], &ad, sp_alen(af)), 0); }
     CHECK(sp_wait_readable(l));
     for (i = 0; i < 3; i++) {
+        CHECK(sp_wait_readable(l));    /* each queued connection becomes visible asynchronously */
         PEQ(l, POLLRDNORM, POLLRDNORM);
         s = sp_accept(l);
         CHECK(s != INVALID_SOCKET);

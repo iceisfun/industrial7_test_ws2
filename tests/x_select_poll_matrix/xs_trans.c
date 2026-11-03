@@ -82,6 +82,7 @@ TEST(tr_listener_cycle)
         VAL("tr_listener", "second_connect", "%d", U(connect)(c2, (struct sockaddr *)&a, l));
         SNAP("tr_listener", "two_queued", st.s);
         a1 = U(accept)(st.s, NULL, NULL);
+        xs_wait(st.s, 'r', 1000);   /* the remaining queued connection becomes visible again; bounded */
         SNAP("tr_listener", "after_accept1", st.s);
         a2 = U(accept)(st.s, NULL, NULL);
         SNAP("tr_listener", "after_accept2", st.s);

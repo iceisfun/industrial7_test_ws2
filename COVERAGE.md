@@ -60,7 +60,7 @@ Exports not yet called by any test (mostly the transport helper entry points exp
 | `core_smoke` | 3 | 4 | load-resolve-invoke smoke test |
 | `dx_gap_00` | 8 | 38 | guarded: persisted 32-bit name-space order writer |
 | `dx_gap_01` | 40 | 206 | guarded: provider and name-space catalog writers with throwaway identities |
-| `dx_gap_02` | 7 | 6 | guarded: service class install/remove with a throwaway id |
+| `dx_gap_02` | 8 | 13 | guarded: service class install/remove with a throwaway id |
 | `dx_gap_04` | 5 | 6 | guarded: mswsock proxy-service start/stop pair |
 | `dx_gap_05` | 6 | 55 | guarded: SAN helper-registration control codes on ordinary endpoints |
 | `dx_provider_catalog` | 247 | 1625 | guarded: install, update, reorder, remove a throwaway base provider |
@@ -93,7 +93,7 @@ Exports not yet called by any test (mostly the transport helper entry points exp
 | `nsp_lookup_service` | 137 | 586 | WSALookupServiceBegin/Next/End argument and handle lifecycle |
 | `protocol_catalog` | 341 | 2124 | catalog enumeration, WSAProviderConfigChange, sockets from catalog entries |
 | `qos_misc_apis` | 212 | 628 | event objects, per-thread error slot, QoS and misc APIs |
-| `select_poll` | 231 | 6784 | fd_set layout, FD_* macros, __WSAFDIsSet, select, WSAPoll |
+| `select_poll` | 231 | 6790 | fd_set layout, FD_* macros, __WSAFDIsSet, select, WSAPoll |
 | `socket_create` | 307 | 11370 | socket / WSASocket creation matrix and the NT object behind a socket |
 | `socket_handle_semantics` | 277 | 1303 | file-style I/O, inheritance and handle interactions with socket state |
 | `sockopt_protocol_level` | 346 | 3981 | IP/IPv6/TCP/UDP level options, dual-stack and packet-info |
@@ -114,14 +114,14 @@ Exports not yet called by any test (mostly the transport helper entry points exp
 | `x_error_mapping` | 724 | 1572 | WSA error to NTSTATUS to Win32 error mapping tables |
 | `x_getaddrinfoex_async` | 170 | 4462 | GetAddrInfoEx synchronous front end: timeout, overlapped, cancel rules |
 | `x_ioctl_sweep` | 236 | 2022692 | state-aware WSAIoctl and option sweeps (TCP, UDP, raw, AF_UNIX) |
-| `x_overlapped_matrix` | 114 | 6295 | overlapped request edge cases: cancel with nothing pending, reuse, results |
+| `x_overlapped_matrix` | 122 | 6537 | overlapped request edge cases: cancel with nothing pending, reuse, results |
 | `x_raw_icmp_elevated` | 227 | 1773 | raw / ICMP sockets, SIO_RCVALL, scatter/gather (elevated only) |
 | `x_registered_io` | 143 | 1780 | RIO extension: argument validation before queuing |
 | `x_select_poll_matrix` | 120 | 3267 | select and WSAPoll with odd sets and arrays |
 | `x_stress_soak_bounded` | 203 | 945 | 200-connection accept soaks with connector threads |
 | `x_tcp_info_fastopen` | 202 | 5167 | TCP bind-conflict matrix, SIO_TCP_INFO, fast open |
 | `x_udp_coalescing_msg` | 134 | 8633 | WSARecvMsg/WSASendMsg call contract, UDP connreset, coalescing |
-| **total (75 areas)** | **15371** | **2241314** | checks are measured on Windows 10 22H2 for the areas run so far |
+| **total (75 areas)** | **15380** | **2241569** | checks are measured on Windows 10 22H2 for the areas run so far |
 
 Test counts are the number of registered tests in each built exe. Check counts are the pass+fail totals from the most recent recorded Windows 10 run (`results/win10/adm/summary.tsv`); areas added after that run show `-` until they are run.
 
