@@ -34,7 +34,12 @@ static void nt_case(int op, int st, int mode)
     int have_early = 0, early = 0, ok, imm, e, done, n, pkts, expect, ev_set = 0, ev_before = 0;
     DWORD bytes = 0xFFFFFFFF;
     snprintf(name, sizeof name, "%s/%s/%s", xom_opname[op], xom_stname[st], mode ? "prepared" : "idle");
-    if (!xom_setup(op, st, 1, mode)) { xom_free(); t_skip("%s: setup refused (mode or provider restriction)", name); return; }
+    if (!xom_setup(op, st, 1, mode)) {
+        int skipmode = (st == ST_SKIPOK || st == ST_SKIPOKNUL);
+        xom_free();
+        if (skipmode) { t_skip("%s: setup refused (mode or provider restriction)", name); return; }
+        CHECKF(0, "%s: setup failed", name); return;
+    }
     ok = xom_issue();
     e = U(WSAGetLastError)();
     imm = ok;
