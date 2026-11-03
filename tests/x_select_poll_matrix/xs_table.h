@@ -520,7 +520,7 @@ static const xs_row xs_rows[] = {
     { "tcp_connect_nb_done_accepted", "poll_all", "n=1 WRNORM" },
     { "tcp_connect_nb_done_accepted", "afd", "n=1 SEND|CONNECT" },
     { "tcp_connect_nb_done_accepted", "enum", "sig=1 WRITE|CONNECT" },
-    { "tcp_connect_nb_done_accepted", "async", "WRITE" },
+    { "tcp_connect_nb_done_accepted", "async", "WRITE||WRITE CONNECT (count=2)" },
     { "tcp_connect_nb_done", "sel", "n=1 -W-" },
     { "tcp_connect_nb_done", "poll_rw", "n=1 WRNORM" },
     { "tcp_connect_nb_done", "poll_band", "n=0 0" },

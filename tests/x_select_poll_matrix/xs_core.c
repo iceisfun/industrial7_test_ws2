@@ -256,6 +256,7 @@ static void obs_async(SOCKET s, char *out, size_t cap)
 {
     if (xs_async_begin(s, FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONNECT | FD_CLOSE)) { snprintf(out, cap, "select-err=%d", xs_err()); return; }
     xs_async_pump(out, cap, 300);
+    if (!strcmp(out, "none")) xs_async_pump(out, cap, 700);   /* a slow guest may deliver the first message late */
     xs_async_end(s);
 }
 
