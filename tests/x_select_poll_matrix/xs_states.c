@@ -112,15 +112,20 @@ B(tcp_connect_nb_done_accepted)
 }
 static int refused(xs_st *st, int nb)
 {
-    anyaddr a; SOCKET l = listener(AF_INET, 1, &a);
-    if (l == INVALID_SOCKET) return 0;
-    xs_close(l);                      /* nothing listens on that port any more */
-    st->s = xs_sock(AF_INET, SOCK_STREAM);
-    if (nb) xs_nb(st->s, 1);
-    U(connect)(st->s, (struct sockaddr *)a.b, a.len);
-    if (nb) return xs_wait(st->s, 'x', 3000) || xs_wait(st->s, 'r', 100);
-    xs_settle(100);
-    return 1;
+    int try_;
+    for (try_ = 0; try_ < (nb ? 3 : 1); try_++) {
+        anyaddr a; SOCKET l = listener(AF_INET, 1, &a);
+        if (l == INVALID_SOCKET) return 0;
+        xs_close(l);                  /* nothing listens on that port any more */
+        st->s = xs_sock(AF_INET, SOCK_STREAM);
+        if (nb) xs_nb(st->s, 1);
+        U(connect)(st->s, (struct sockaddr *)a.b, a.len);
+        if (!nb) { xs_settle(100); return 1; }
+        /* the refusal is normally immediate but its arrival is not bounded tightly: retry on a fresh socket */
+        if (xs_wait(st->s, 'x', 3000) || xs_wait(st->s, 'r', 100)) return 1;
+        xs_close(st->s); st->s = INVALID_SOCKET;
+    }
+    return 0;
 }
 B(tcp_connect_refused_nb)      { return refused(st, 1); }
 B(tcp_connect_refused_nb_soerr_read)
