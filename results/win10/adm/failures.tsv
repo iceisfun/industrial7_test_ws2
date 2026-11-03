@@ -16,7 +16,7 @@ gap_01	SKIP blob only exists on the Ex forms
 gap_01	SKIP blob only exists on the Ex forms
 gap_01	SKIP blob only exists on the Ex forms
 gap_01	SKIP blob only exists on the Ex forms
-dx_gap_02	SKIP registration refused (10065, 10065)
-dx_gap_02	SKIP registration refused (10065)
-dx_gap_02	SKIP registration refused (10065)
+dx_gap_02	SKIP registration refused (10065): NTDS provider needs a directory domain, none joined
+dx_gap_02	SKIP registration refused (10065): NTDS provider needs a directory domain, none joined
+dx_gap_02	SKIP registration refused (10065): NTDS provider needs a directory domain, none joined
 dx_qos_misc_apis	SKIP only meaningful for a plain token

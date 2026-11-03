@@ -134,3 +134,10 @@ before it starts; the guest's `ws2t` scratch directory (`C:\ws2t`) and the stand
 5. Determinism: which areas were run more than once and whether the outputs matched byte for byte.
 6. Any `NOTE` lines that look like they should be hard checks, or hard checks you think are version dependent.
 7. Anything left on the guest after the dx pass.
+
+## Open items (pass 3)
+
+- **x_getaddrinfoex_async, standard-user mode, rare crash.** One run in about 38 ended with exception 0xC0000409 shortly after `xcan_cancel_pending_localhost_selector_all` (a rapid GetAddrInfoExCancel following a pending call). Not reproduced in 30 repeats of the `xcan_` filter. Treat a recurrence as a flaky-test report on the area, not as evidence about another implementation; do not remove the test.
+- **dx_gap_02 accepted path** (roundtrip, remove twice, two classes) is unverified: it needs a directory domain, the guest is a workgroup machine.
+- **Unsampled:** ACP 932 (DBCS) rows, server SKUs, IPX, IPv6-less guests, Windows builds other than 19045.
+- **Overlapped matrix:** immediate-vs-pending is recorded for recv, recvfrom, send and AcceptEx only; ConnectEx, TransmitFile and ReadFile/WriteFile variants are covered by the older grid.
