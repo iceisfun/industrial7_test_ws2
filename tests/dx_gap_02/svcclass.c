@@ -66,6 +66,18 @@ static int holders(const GUID *id, WSASERVICECLASSINFOW **first_out, BYTE *keep,
     return hits;
 }
 
+
+/* The only catalog name space that stores service classes is NTDS (directory-backed); on a guest that is not
+ * joined to a directory domain its provider reports WSAEHOSTUNREACH (10065), and the "all name spaces"
+ * selector surfaces that error. Every other provider refuses a class registration with 87. */
+static const char *refusal_why(int e) {
+    WCHAR dom[256]; DWORD n = 256;
+    if (e != 10065) return "unexpected error";
+    dom[0] = 0;
+    if (GetComputerNameExW(ComputerNameDnsDomain, dom, &n) && dom[0]) return "NTDS provider refused although the machine reports a domain";
+    return "NTDS provider needs a directory domain, none joined";
+}
+
 /* Registration with the "all name spaces" selector: whatever the outcome, it must leave the store consistent. */
 TEST(gap2dx_class_install_all_namespaces_outcome_is_consistent) {
     GUID id = dx2_class_a; int e;
@@ -73,7 +85,7 @@ TEST(gap2dx_class_install_all_namespaces_outcome_is_consistent) {
     e = dx2_install(&id, L"ws2t-dx-class-a", NS_ALL, 7);
     if (e) {
         EXPECT_EQ(holders(&id, NULL, NULL, 0), 0);          /* a refusal registered nothing anywhere */
-        t_note("registration of a class for all name spaces refused");
+        t_note("registration of a class for all name spaces refused (%d): %s", e, refusal_why(e));
     } else {
         CHECK(holders(&id, NULL, NULL, 0) >= 1);
     }
@@ -117,7 +129,7 @@ TEST(gap2dx_class_roundtrip_when_accepted) {
     GUID id = dx2_class_a; int e; BYTE keep[0x400]; WSASERVICECLASSINFOW *sc = NULL;
     SETUP();
     e = dx2_install(&id, L"ws2t-dx-class-a", NS_ALL, 7);
-    if (e) { t_skip("registration refused (%d)", e); return; }
+    if (e) { t_skip("registration refused (%d): %s", e, refusal_why(e)); return; }
     CHECK(holders(&id, &sc, keep, sizeof keep) >= 1);
     if (sc) {
         EXPECT_EQ(memcmp(sc->lpServiceClassId, &id, sizeof id), 0);
@@ -131,7 +143,7 @@ TEST(gap2dx_class_remove_twice_second_fails_when_accepted) {
     GUID id = dx2_class_a; int e;
     SETUP();
     e = dx2_install(&id, L"ws2t-dx-class-a", NS_ALL, 7);
-    if (e) { t_skip("registration refused (%d)", e); return; }
+    if (e) { t_skip("registration refused (%d): %s", e, refusal_why(e)); return; }
     W_SETERR(0);
     EXPECT_EQ(WS(WSARemoveServiceClass)(&id), 0);
     W_SETERR(0);
@@ -152,9 +164,37 @@ TEST(gap2dx_class_two_classes_do_not_interfere_when_accepted) {
     SETUP();
     e1 = dx2_install(&a, L"ws2t-dx-class-a", NS_ALL, 1);
     e2 = dx2_install(&b, L"ws2t-dx-class-b", NS_ALL, 2);
-    if (e1 || e2) { t_skip("registration refused (%d, %d)", e1, e2); dx2_sweep(); return; }
+    if (e1 || e2) { t_skip("registration refused (%d, %d): %s", e1, e2, refusal_why(e1 ? e1 : e2)); dx2_sweep(); return; }
     WS(WSARemoveServiceClass)(&a);
     EXPECT_EQ(holders(&a, NULL, NULL, 0), 0);
     CHECK(holders(&b, NULL, NULL, 0) >= 1);
     dx2_sweep();
+}
+
+/* Which name spaces accept a registration: record the per-provider outcome; only the DNS-style providers are
+ * pinned (they never hold classes). The directory provider's outcome depends on domain membership. */
+TEST(gap2dx_class_install_per_namespace_outcomes) {
+    GUID id = dx2_class_a; WSANAMESPACE_INFOW *cat; DWORD len = 0; int n, i, accepted = 0;
+    SETUP();
+    WS(WSAEnumNameSpaceProvidersW)(&len, NULL);
+    cat = (WSANAMESPACE_INFOW *)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, len ? len : 1);
+    n = WS(WSAEnumNameSpaceProvidersW)(&len, cat);
+    for (i = 0; i < n; i++) {
+        int e;
+        if (!cat[i].fActive) continue;
+        e = dx2_install(&id, L"ws2t-dx-class-a", cat[i].dwNameSpace, 7);
+        if (cat[i].dwNameSpace == 32) {                      /* NS_NTDS */
+            t_note("NTDS registration: error %d (%s)", e, e ? refusal_why(e) : "accepted");
+            if (e == 0) accepted++;
+        } else if (e == 0) {
+            accepted++;                                       /* not expected on Windows 10; leave nothing behind */
+            CHECK(0);
+        } else {
+            EXPECT_EQ(e, 87);                                 /* no other provider holds classes */
+        }
+        dx2_sweep();
+    }
+    HeapFree(GetProcessHeap(), 0, cat);
+    EXPECT_EQ(holders(&id, NULL, NULL, 0), 0);
+    t_note("name spaces that accepted a registration: %d", accepted);
 }
