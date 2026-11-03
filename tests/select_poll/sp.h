@@ -219,8 +219,9 @@ static int sp_poll_settle(SOCKET s, short events, short bits)
 {
     short rv = 0;
     int i;
-    for (i = 0; i < 40; i++) {
+    for (i = 0; i < 80; i++) {
         if (sp_poll(s, events, 100, &rv) > 0 && (rv & bits) == bits) return (unsigned short)rv;
+        Sleep(50);   /* poll returns at once when already ready for other bits: pace the retries */
     }
     return (unsigned short)rv;
 }
