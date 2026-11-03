@@ -1,0 +1,443 @@
+[
+{
+"name": "AcceptEx",
+"ordinal": 1,
+"rva": 163632,
+"forwarder": null,
+"ref": "mswsock.dll!0x27f30"
+},
+{
+"name": "EnumProtocolsA",
+"ordinal": 2,
+"rva": 165184,
+"forwarder": null,
+"ref": "mswsock.dll!0x28540"
+},
+{
+"name": "EnumProtocolsW",
+"ordinal": 3,
+"rva": 165328,
+"forwarder": null,
+"ref": "mswsock.dll!0x285d0"
+},
+{
+"name": "GetAcceptExSockaddrs",
+"ordinal": 4,
+"rva": 164080,
+"forwarder": null,
+"ref": "mswsock.dll!0x280f0"
+},
+{
+"name": "GetAddressByNameA",
+"ordinal": 5,
+"rva": 170912,
+"forwarder": null,
+"ref": "mswsock.dll!0x29ba0"
+},
+{
+"name": "GetAddressByNameW",
+"ordinal": 6,
+"rva": 171488,
+"forwarder": null,
+"ref": "mswsock.dll!0x29de0"
+},
+{
+"name": "GetNameByTypeA",
+"ordinal": 7,
+"rva": 171920,
+"forwarder": null,
+"ref": "mswsock.dll!0x29f90"
+},
+{
+"name": "GetNameByTypeW",
+"ordinal": 8,
+"rva": 172224,
+"forwarder": null,
+"ref": "mswsock.dll!0x2a0c0"
+},
+{
+"name": "GetServiceA",
+"ordinal": 9,
+"rva": 174288,
+"forwarder": null,
+"ref": "mswsock.dll!0x2a8d0"
+},
+{
+"name": "GetServiceW",
+"ordinal": 10,
+"rva": 174464,
+"forwarder": null,
+"ref": "mswsock.dll!0x2a980"
+},
+{
+"name": "GetSocketErrorMessageW",
+"ordinal": 11,
+"rva": 178896,
+"forwarder": null,
+"ref": "mswsock.dll!0x2bad0"
+},
+{
+"name": "GetTypeByNameA",
+"ordinal": 12,
+"rva": 173072,
+"forwarder": null,
+"ref": "mswsock.dll!0x2a410"
+},
+{
+"name": "GetTypeByNameW",
+"ordinal": 13,
+"rva": 173216,
+"forwarder": null,
+"ref": "mswsock.dll!0x2a4a0"
+},
+{
+"name": "MigrateWinsockConfiguration",
+"ordinal": 14,
+"rva": 199248,
+"forwarder": null,
+"ref": "mswsock.dll!0x30a50"
+},
+{
+"name": "MigrateWinsockConfigurationEx",
+"ordinal": 15,
+"rva": 199312,
+"forwarder": null,
+"ref": "mswsock.dll!0x30a90"
+},
+{
+"name": "NPLoadNameSpaces",
+"ordinal": 16,
+"rva": 182576,
+"forwarder": null,
+"ref": "mswsock.dll!0x2c930"
+},
+{
+"name": "NSPStartup",
+"ordinal": 17,
+"rva": 49312,
+"forwarder": null,
+"ref": "mswsock.dll!0xc0a0"
+},
+{
+"name": "SetServiceA",
+"ordinal": 18,
+"rva": 177456,
+"forwarder": null,
+"ref": "mswsock.dll!0x2b530"
+},
+{
+"name": "SetServiceW",
+"ordinal": 19,
+"rva": 178016,
+"forwarder": null,
+"ref": "mswsock.dll!0x2b760"
+},
+{
+"name": "StartWsdpService",
+"ordinal": 20,
+"rva": 124560,
+"forwarder": null,
+"ref": "mswsock.dll!0x1e690"
+},
+{
+"name": "StopWsdpService",
+"ordinal": 21,
+"rva": 125392,
+"forwarder": null,
+"ref": "mswsock.dll!0x1e9d0"
+},
+{
+"name": "Tcpip4_WSHAddressToString",
+"ordinal": 22,
+"rva": 59984,
+"forwarder": null,
+"ref": "mswsock.dll!0xea50"
+},
+{
+"name": "Tcpip4_WSHEnumProtocols",
+"ordinal": 23,
+"rva": 216240,
+"forwarder": null,
+"ref": "mswsock.dll!0x34cb0"
+},
+{
+"name": "Tcpip4_WSHGetBroadcastSockaddr",
+"ordinal": 24,
+"rva": 216736,
+"forwarder": null,
+"ref": "mswsock.dll!0x34ea0"
+},
+{
+"name": "Tcpip4_WSHGetProviderGuid",
+"ordinal": 25,
+"rva": 216816,
+"forwarder": null,
+"ref": "mswsock.dll!0x34ef0"
+},
+{
+"name": "Tcpip4_WSHGetSockaddrType",
+"ordinal": 26,
+"rva": 58736,
+"forwarder": null,
+"ref": "mswsock.dll!0xe570"
+},
+{
+"name": "Tcpip4_WSHGetSocketInformation",
+"ordinal": 27,
+"rva": 57280,
+"forwarder": null,
+"ref": "mswsock.dll!0xdfc0"
+},
+{
+"name": "Tcpip4_WSHGetWSAProtocolInfo",
+"ordinal": 28,
+"rva": 216896,
+"forwarder": null,
+"ref": "mswsock.dll!0x34f40"
+},
+{
+"name": "Tcpip4_WSHGetWildcardSockaddr",
+"ordinal": 29,
+"rva": 62800,
+"forwarder": null,
+"ref": "mswsock.dll!0xf550"
+},
+{
+"name": "Tcpip4_WSHGetWinsockMapping",
+"ordinal": 30,
+"rva": 217008,
+"forwarder": null,
+"ref": "mswsock.dll!0x34fb0"
+},
+{
+"name": "Tcpip4_WSHIoctl",
+"ordinal": 31,
+"rva": 217120,
+"forwarder": null,
+"ref": "mswsock.dll!0x35020"
+},
+{
+"name": "Tcpip4_WSHJoinLeaf",
+"ordinal": 32,
+"rva": 217136,
+"forwarder": null,
+"ref": "mswsock.dll!0x35030"
+},
+{
+"name": "Tcpip4_WSHNotify",
+"ordinal": 33,
+"rva": 217376,
+"forwarder": null,
+"ref": "mswsock.dll!0x35120"
+},
+{
+"name": "Tcpip4_WSHOpenSocket",
+"ordinal": 34,
+"rva": 217456,
+"forwarder": null,
+"ref": "mswsock.dll!0x35170"
+},
+{
+"name": "Tcpip4_WSHOpenSocket2",
+"ordinal": 35,
+"rva": 58208,
+"forwarder": null,
+"ref": "mswsock.dll!0xe360"
+},
+{
+"name": "Tcpip4_WSHSetSocketInformation",
+"ordinal": 36,
+"rva": 63488,
+"forwarder": null,
+"ref": "mswsock.dll!0xf800"
+},
+{
+"name": "Tcpip4_WSHStringToAddress",
+"ordinal": 37,
+"rva": 68336,
+"forwarder": null,
+"ref": "mswsock.dll!0x10af0"
+},
+{
+"name": "Tcpip6_WSHAddressToString",
+"ordinal": 38,
+"rva": 62992,
+"forwarder": null,
+"ref": "mswsock.dll!0xf610"
+},
+{
+"name": "Tcpip6_WSHEnumProtocols",
+"ordinal": 39,
+"rva": 217520,
+"forwarder": null,
+"ref": "mswsock.dll!0x351b0"
+},
+{
+"name": "Tcpip6_WSHGetProviderGuid",
+"ordinal": 40,
+"rva": 218016,
+"forwarder": null,
+"ref": "mswsock.dll!0x353a0"
+},
+{
+"name": "Tcpip6_WSHGetSockaddrType",
+"ordinal": 41,
+"rva": 57744,
+"forwarder": null,
+"ref": "mswsock.dll!0xe190"
+},
+{
+"name": "Tcpip6_WSHGetSocketInformation",
+"ordinal": 42,
+"rva": 57280,
+"forwarder": null,
+"ref": "mswsock.dll!0xdfc0"
+},
+{
+"name": "Tcpip6_WSHGetWSAProtocolInfo",
+"ordinal": 43,
+"rva": 218096,
+"forwarder": null,
+"ref": "mswsock.dll!0x353f0"
+},
+{
+"name": "Tcpip6_WSHGetWildcardSockaddr",
+"ordinal": 44,
+"rva": 68464,
+"forwarder": null,
+"ref": "mswsock.dll!0x10b70"
+},
+{
+"name": "Tcpip6_WSHGetWinsockMapping",
+"ordinal": 45,
+"rva": 218208,
+"forwarder": null,
+"ref": "mswsock.dll!0x35460"
+},
+{
+"name": "Tcpip6_WSHIoctl",
+"ordinal": 46,
+"rva": 217120,
+"forwarder": null,
+"ref": "mswsock.dll!0x35020"
+},
+{
+"name": "Tcpip6_WSHJoinLeaf",
+"ordinal": 47,
+"rva": 218320,
+"forwarder": null,
+"ref": "mswsock.dll!0x354d0"
+},
+{
+"name": "Tcpip6_WSHNotify",
+"ordinal": 48,
+"rva": 218608,
+"forwarder": null,
+"ref": "mswsock.dll!0x355f0"
+},
+{
+"name": "Tcpip6_WSHOpenSocket",
+"ordinal": 49,
+"rva": 218688,
+"forwarder": null,
+"ref": "mswsock.dll!0x35640"
+},
+{
+"name": "Tcpip6_WSHOpenSocket2",
+"ordinal": 50,
+"rva": 57360,
+"forwarder": null,
+"ref": "mswsock.dll!0xe010"
+},
+{
+"name": "Tcpip6_WSHSetSocketInformation",
+"ordinal": 51,
+"rva": 63488,
+"forwarder": null,
+"ref": "mswsock.dll!0xf800"
+},
+{
+"name": "Tcpip6_WSHStringToAddress",
+"ordinal": 52,
+"rva": 65600,
+"forwarder": null,
+"ref": "mswsock.dll!0x10040"
+},
+{
+"name": "TransmitFile",
+"ordinal": 53,
+"rva": 164976,
+"forwarder": null,
+"ref": "mswsock.dll!0x28470"
+},
+{
+"name": "WSARecvEx",
+"ordinal": 54,
+"rva": 185936,
+"forwarder": null,
+"ref": "mswsock.dll!0x2d650"
+},
+{
+"name": "WSPStartup",
+"ordinal": 55,
+"rva": 39008,
+"forwarder": null,
+"ref": "mswsock.dll!0x9860"
+},
+{
+"name": "dn_expand",
+"ordinal": 56,
+"rva": 156464,
+"forwarder": null,
+"ref": "mswsock.dll!0x26330"
+},
+{
+"name": "getnetbyname",
+"ordinal": 57,
+"rva": 125616,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eab0"
+},
+{
+"name": "inet_network",
+"ordinal": 58,
+"rva": 125664,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eae0"
+},
+{
+"name": "rcmd",
+"ordinal": 59,
+"rva": 125680,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eaf0"
+},
+{
+"name": "rexec",
+"ordinal": 60,
+"rva": 125680,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eaf0"
+},
+{
+"name": "rresvport",
+"ordinal": 61,
+"rva": 125680,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eaf0"
+},
+{
+"name": "s_perror",
+"ordinal": 62,
+"rva": 180640,
+"forwarder": null,
+"ref": "mswsock.dll!0x2c1a0"
+},
+{
+"name": "sethostname",
+"ordinal": 63,
+"rva": 125728,
+"forwarder": null,
+"ref": "mswsock.dll!0x1eb20"
+}
+]

@@ -1,0 +1,22 @@
+lift_05	SKIP IPX not present
+lift_07	SKIP event-object mode only
+lift_07	SKIP event-object mode only
+qos_misc_apis	SKIP no safe argument-error path (the target description is dereferenced first)
+qos_misc_apis	SKIP changes service configuration (covered only by the guarded destructive area)
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP needs a non-elevated token
+x_raw_icmp_elevated	SKIP refusal path needs a non-elevated token
+gap_01	SKIP every native provider id also exists in the 32-bit list
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms
+dx_gap_02	SKIP registration refused (10065, 10065)
+dx_gap_02	SKIP registration refused (10065)
+dx_gap_02	SKIP registration refused (10065)
+dx_qos_misc_apis	SKIP only meaningful for a plain token

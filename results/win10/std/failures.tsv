@@ -1,0 +1,90 @@
+afd_endpoint_create	SKIP socket not created (wsa error class 1)
+lift_04	SKIP raw sockets unavailable (10013)
+lift_04	SKIP raw sockets unavailable (10013)
+lift_05	SKIP IPX not present
+lift_05	SKIP raw sockets not permitted for this account
+lift_07	SKIP event-object mode only
+lift_07	SKIP event-object mode only
+lift_11	SKIP raw sockets not permitted
+lift_11	SKIP raw sockets not permitted
+nsp_lookup_service	SKIP not elevated
+nsp_lookup_service	SKIP not elevated
+nsp_lookup_service	SKIP not elevated
+qos_misc_apis	SKIP no safe argument-error path (the target description is dereferenced first)
+qos_misc_apis	SKIP changes service configuration (covered only by the guarded destructive area)
+socket_create	SKIP raw sockets need an elevated token
+socket_create	SKIP raw sockets need an elevated token
+socket_create	SKIP raw sockets need an elevated token
+x_af_unix_deep	SKIP symbolic links need a privilege this token lacks (error 1314)
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+x_raw_icmp_elevated	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_00	SKIP needs an elevated token
+gap_01	SKIP every native provider id also exists in the 32-bit list
+gap_01	SKIP needs elevation to reach the catalog
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms
+gap_01	SKIP blob only exists on the Ex forms

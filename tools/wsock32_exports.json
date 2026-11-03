@@ -1,0 +1,527 @@
+[
+{
+"name": "accept",
+"ordinal": 1,
+"rva": 16466,
+"forwarder": "ws2_32.accept",
+"ref": null
+},
+{
+"name": "bind",
+"ordinal": 2,
+"rva": 16485,
+"forwarder": "ws2_32.bind",
+"ref": null
+},
+{
+"name": "closesocket",
+"ordinal": 3,
+"rva": 16509,
+"forwarder": "ws2_32.closesocket",
+"ref": null
+},
+{
+"name": "connect",
+"ordinal": 4,
+"rva": 16536,
+"forwarder": "ws2_32.connect",
+"ref": null
+},
+{
+"name": "getpeername",
+"ordinal": 5,
+"rva": 16726,
+"forwarder": "ws2_32.getpeername",
+"ref": null
+},
+{
+"name": "getsockname",
+"ordinal": 6,
+"rva": 16905,
+"forwarder": "ws2_32.getsockname",
+"ref": null
+},
+{
+"name": "getsockopt",
+"ordinal": 7,
+"rva": 7552,
+"forwarder": null,
+"ref": "wsock32.dll!0x1d80"
+},
+{
+"name": "htonl",
+"ordinal": 8,
+"rva": 16941,
+"forwarder": "ws2_32.htonl",
+"ref": null
+},
+{
+"name": "htons",
+"ordinal": 9,
+"rva": 16960,
+"forwarder": "ws2_32.htons",
+"ref": null
+},
+{
+"name": "inet_addr",
+"ordinal": 10,
+"rva": 16983,
+"forwarder": "ws2_32.inet_addr",
+"ref": null
+},
+{
+"name": "inet_ntoa",
+"ordinal": 11,
+"rva": 17044,
+"forwarder": "ws2_32.inet_ntoa",
+"ref": null
+},
+{
+"name": "ioctlsocket",
+"ordinal": 12,
+"rva": 17073,
+"forwarder": "ws2_32.ioctlsocket",
+"ref": null
+},
+{
+"name": "listen",
+"ordinal": 13,
+"rva": 17099,
+"forwarder": "ws2_32.listen",
+"ref": null
+},
+{
+"name": "ntohl",
+"ordinal": 14,
+"rva": 17119,
+"forwarder": "ws2_32.ntohl",
+"ref": null
+},
+{
+"name": "ntohs",
+"ordinal": 15,
+"rva": 17138,
+"forwarder": "ws2_32.ntohs",
+"ref": null
+},
+{
+"name": "recv",
+"ordinal": 16,
+"rva": 4112,
+"forwarder": null,
+"ref": "wsock32.dll!0x1010"
+},
+{
+"name": "recvfrom",
+"ordinal": 17,
+"rva": 7696,
+"forwarder": null,
+"ref": "wsock32.dll!0x1e10"
+},
+{
+"name": "select",
+"ordinal": 18,
+"rva": 17264,
+"forwarder": "ws2_32.select",
+"ref": null
+},
+{
+"name": "send",
+"ordinal": 19,
+"rva": 17283,
+"forwarder": "ws2_32.send",
+"ref": null
+},
+{
+"name": "sendto",
+"ordinal": 20,
+"rva": 17302,
+"forwarder": "ws2_32.sendto",
+"ref": null
+},
+{
+"name": "setsockopt",
+"ordinal": 21,
+"rva": 7856,
+"forwarder": null,
+"ref": "wsock32.dll!0x1eb0"
+},
+{
+"name": "shutdown",
+"ordinal": 22,
+"rva": 17368,
+"forwarder": "ws2_32.shutdown",
+"ref": null
+},
+{
+"name": "socket",
+"ordinal": 23,
+"rva": 17391,
+"forwarder": "ws2_32.socket",
+"ref": null
+},
+{
+"name": "MigrateWinsockConfiguration",
+"ordinal": 24,
+"rva": 15487,
+"forwarder": "MSWSOCK.MigrateWinsockConfiguration",
+"ref": null
+},
+{
+"name": "gethostbyaddr",
+"ordinal": 51,
+"rva": 16593,
+"forwarder": "ws2_32.gethostbyaddr",
+"ref": null
+},
+{
+"name": "gethostbyname",
+"ordinal": 52,
+"rva": 16628,
+"forwarder": "ws2_32.gethostbyname",
+"ref": null
+},
+{
+"name": "getprotobyname",
+"ordinal": 53,
+"rva": 16760,
+"forwarder": "ws2_32.getprotobyname",
+"ref": null
+},
+{
+"name": "getprotobynumber",
+"ordinal": 54,
+"rva": 16799,
+"forwarder": "ws2_32.getprotobynumber",
+"ref": null
+},
+{
+"name": "getservbyname",
+"ordinal": 55,
+"rva": 16837,
+"forwarder": "ws2_32.getservbyname",
+"ref": null
+},
+{
+"name": "getservbyport",
+"ordinal": 56,
+"rva": 16872,
+"forwarder": "ws2_32.getservbyport",
+"ref": null
+},
+{
+"name": "gethostname",
+"ordinal": 57,
+"rva": 16661,
+"forwarder": "ws2_32.gethostname",
+"ref": null
+},
+{
+"name": "WSAAsyncSelect",
+"ordinal": 101,
+"rva": 16007,
+"forwarder": "ws2_32.WSAAsyncSelect",
+"ref": null
+},
+{
+"name": "WSAAsyncGetHostByAddr",
+"ordinal": 102,
+"rva": 15700,
+"forwarder": "ws2_32.WSAAsyncGetHostByAddr",
+"ref": null
+},
+{
+"name": "WSAAsyncGetHostByName",
+"ordinal": 103,
+"rva": 15751,
+"forwarder": "ws2_32.WSAAsyncGetHostByName",
+"ref": null
+},
+{
+"name": "WSAAsyncGetProtoByNumber",
+"ordinal": 104,
+"rva": 15858,
+"forwarder": "ws2_32.WSAAsyncGetProtoByNumber",
+"ref": null
+},
+{
+"name": "WSAAsyncGetProtoByName",
+"ordinal": 105,
+"rva": 15803,
+"forwarder": "ws2_32.WSAAsyncGetProtoByName",
+"ref": null
+},
+{
+"name": "WSAAsyncGetServByPort",
+"ordinal": 106,
+"rva": 15963,
+"forwarder": "ws2_32.WSAAsyncGetServByPort",
+"ref": null
+},
+{
+"name": "WSAAsyncGetServByName",
+"ordinal": 107,
+"rva": 15912,
+"forwarder": "ws2_32.WSAAsyncGetServByName",
+"ref": null
+},
+{
+"name": "WSACancelAsyncRequest",
+"ordinal": 108,
+"rva": 16051,
+"forwarder": "ws2_32.WSACancelAsyncRequest",
+"ref": null
+},
+{
+"name": "WSASetBlockingHook",
+"ordinal": 109,
+"rva": 16281,
+"forwarder": "ws2_32.WSASetBlockingHook",
+"ref": null
+},
+{
+"name": "WSAUnhookBlockingHook",
+"ordinal": 110,
+"rva": 16397,
+"forwarder": "ws2_32.WSAUnhookBlockingHook",
+"ref": null
+},
+{
+"name": "WSAGetLastError",
+"ordinal": 111,
+"rva": 16176,
+"forwarder": "ws2_32.WSAGetLastError",
+"ref": null
+},
+{
+"name": "WSASetLastError",
+"ordinal": 112,
+"rva": 16323,
+"forwarder": "ws2_32.WSASetLastError",
+"ref": null
+},
+{
+"name": "WSACancelBlockingCall",
+"ordinal": 113,
+"rva": 16102,
+"forwarder": "ws2_32.WSACancelBlockingCall",
+"ref": null
+},
+{
+"name": "WSAIsBlocking",
+"ordinal": 114,
+"rva": 16213,
+"forwarder": "ws2_32.WSAIsBlocking",
+"ref": null
+},
+{
+"name": "WSAStartup",
+"ordinal": 115,
+"rva": 16357,
+"forwarder": "ws2_32.WSAStartup",
+"ref": null
+},
+{
+"name": "WSACleanup",
+"ordinal": 116,
+"rva": 16142,
+"forwarder": "ws2_32.WSACleanup",
+"ref": null
+},
+{
+"name": "__WSAFDIsSet",
+"ordinal": 151,
+"rva": 16439,
+"forwarder": "ws2_32.__WSAFDIsSet",
+"ref": null
+},
+{
+"name": "WEP",
+"ordinal": 500,
+"rva": 15667,
+"forwarder": "ws2_32.WEP",
+"ref": null
+},
+{
+"name": "WSApSetPostRoutine",
+"ordinal": 1000,
+"rva": 14977,
+"forwarder": "ws2_32.WSApSetPostRoutine",
+"ref": null
+},
+{
+"name": "inet_network",
+"ordinal": 1100,
+"rva": 17013,
+"forwarder": "MSWSOCK.inet_network",
+"ref": null
+},
+{
+"name": "getnetbyname",
+"ordinal": 1101,
+"rva": 16693,
+"forwarder": "MSWSOCK.getnetbyname",
+"ref": null
+},
+{
+"name": "rcmd",
+"ordinal": 1102,
+"rva": 17156,
+"forwarder": "MSWSOCK.rcmd",
+"ref": null
+},
+{
+"name": "rexec",
+"ordinal": 1103,
+"rva": 17189,
+"forwarder": "MSWSOCK.rexec",
+"ref": null
+},
+{
+"name": "rresvport",
+"ordinal": 1104,
+"rva": 17213,
+"forwarder": "MSWSOCK.rresvport",
+"ref": null
+},
+{
+"name": "sethostname",
+"ordinal": 1105,
+"rva": 17328,
+"forwarder": "MSWSOCK.sethostname",
+"ref": null
+},
+{
+"name": "dn_expand",
+"ordinal": 1106,
+"rva": 16561,
+"forwarder": "MSWSOCK.dn_expand",
+"ref": null
+},
+{
+"name": "WSARecvEx",
+"ordinal": 1107,
+"rva": 16244,
+"forwarder": "MSWSOCK.WSARecvEx",
+"ref": null
+},
+{
+"name": "s_perror",
+"ordinal": 1108,
+"rva": 17240,
+"forwarder": "MSWSOCK.s_perror",
+"ref": null
+},
+{
+"name": "GetAddressByNameA",
+"ordinal": 1109,
+"rva": 15173,
+"forwarder": "MSWSOCK.GetAddressByNameA",
+"ref": null
+},
+{
+"name": "GetAddressByNameW",
+"ordinal": 1110,
+"rva": 15217,
+"forwarder": "MSWSOCK.GetAddressByNameW",
+"ref": null
+},
+{
+"name": "EnumProtocolsA",
+"ordinal": 1111,
+"rva": 15044,
+"forwarder": "MSWSOCK.EnumProtocolsA",
+"ref": null
+},
+{
+"name": "EnumProtocolsW",
+"ordinal": 1112,
+"rva": 15082,
+"forwarder": "MSWSOCK.EnumProtocolsW",
+"ref": null
+},
+{
+"name": "GetTypeByNameA",
+"ordinal": 1113,
+"rva": 15398,
+"forwarder": "MSWSOCK.GetTypeByNameA",
+"ref": null
+},
+{
+"name": "GetTypeByNameW",
+"ordinal": 1114,
+"rva": 15436,
+"forwarder": "MSWSOCK.GetTypeByNameW",
+"ref": null
+},
+{
+"name": "GetNameByTypeA",
+"ordinal": 1115,
+"rva": 15258,
+"forwarder": "MSWSOCK.GetNameByTypeA",
+"ref": null
+},
+{
+"name": "GetNameByTypeW",
+"ordinal": 1116,
+"rva": 15296,
+"forwarder": "MSWSOCK.GetNameByTypeW",
+"ref": null
+},
+{
+"name": "SetServiceA",
+"ordinal": 1117,
+"rva": 15577,
+"forwarder": "MSWSOCK.SetServiceA",
+"ref": null
+},
+{
+"name": "SetServiceW",
+"ordinal": 1118,
+"rva": 15609,
+"forwarder": "MSWSOCK.SetServiceW",
+"ref": null
+},
+{
+"name": "GetServiceA",
+"ordinal": 1119,
+"rva": 15331,
+"forwarder": "MSWSOCK.GetServiceA",
+"ref": null
+},
+{
+"name": "GetServiceW",
+"ordinal": 1120,
+"rva": 15363,
+"forwarder": "MSWSOCK.GetServiceW",
+"ref": null
+},
+{
+"name": "NPLoadNameSpaces",
+"ordinal": 1130,
+"rva": 15540,
+"forwarder": "MSWSOCK.NPLoadNameSpaces",
+"ref": null
+},
+{
+"name": "TransmitFile",
+"ordinal": 1140,
+"rva": 15642,
+"forwarder": "MSWSOCK.TransmitFile",
+"ref": null
+},
+{
+"name": "AcceptEx",
+"ordinal": 1141,
+"rva": 15012,
+"forwarder": "MSWSOCK.AcceptEx",
+"ref": null
+},
+{
+"name": "GetAcceptExSockaddrs",
+"ordinal": 1142,
+"rva": 15126,
+"forwarder": "MSWSOCK.GetAcceptExSockaddrs",
+"ref": null
+}
+]
